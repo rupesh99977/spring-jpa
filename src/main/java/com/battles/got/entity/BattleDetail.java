@@ -10,7 +10,7 @@ public class BattleDetail {
     private String name;
     private String year;
     @Column(unique = true, nullable = false)
-    private String battle_number;
+    private String battleNumber;
     @OneToOne(targetEntity = King.class, cascade = CascadeType.ALL)
     private King attacker;
     @OneToOne(targetEntity = King.class, cascade = CascadeType.ALL)
@@ -38,10 +38,10 @@ public class BattleDetail {
 
     }
 
-    public BattleDetail(String name, String year, String battle_number, King attacker, King defender, String attacker_2, String attacker_3, String attacker_4, String defender_2, String defender_3, String defender_4, String attacker_outcome, String battle_type, String major_death, String major_capture, String attacker_size, String defender_size, String attacker_commander, String defender_commander, String summer, Place place, String note) {
+    public BattleDetail(String name, String year, String battleNumber, King attacker, King defender, String attacker_2, String attacker_3, String attacker_4, String defender_2, String defender_3, String defender_4, String attacker_outcome, String battle_type, String major_death, String major_capture, String attacker_size, String defender_size, String attacker_commander, String defender_commander, String summer, Place place, String note) {
         this.name = name;
         this.year = year;
-        this.battle_number = battle_number;
+        this.battleNumber = battleNumber;
         this.attacker = attacker;
         this.defender = defender;
         this.attacker_2 = attacker_2;
@@ -63,10 +63,10 @@ public class BattleDetail {
         this.note = note;
     }
 
-    public BattleDetail(String name, String year, String battle_number, String attacker_2, String attacker_3, String attacker_4, String defender_2, String defender_3, String defender_4, String attacker_outcome, String battle_type, String major_death, String major_capture, String attacker_size, String defender_size, String attacker_commander, String defender_commander, String summer, String note) {
+    public BattleDetail(String name, String year, String battleNumber, String attacker_2, String attacker_3, String attacker_4, String defender_2, String defender_3, String defender_4, String attacker_outcome, String battle_type, String major_death, String major_capture, String attacker_size, String defender_size, String attacker_commander, String defender_commander, String summer, String note) {
         this.name = name;
         this.year = year;
-        this.battle_number = battle_number;
+        this.battleNumber = battleNumber;
         this.attacker_2 = attacker_2;
         this.attacker_3 = attacker_3;
         this.attacker_4 = attacker_4;
@@ -126,11 +126,11 @@ public class BattleDetail {
     }
 
     public String getBattle_number() {
-        return battle_number;
+        return battleNumber;
     }
 
-    public void setBattle_number(String battle_number) {
-        this.battle_number = battle_number;
+    public void setBattle_number(String battleNumber) {
+        this.battleNumber = battleNumber;
     }
 
     public King getAttacker_king() {

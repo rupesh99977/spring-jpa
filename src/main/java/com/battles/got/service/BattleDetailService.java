@@ -12,6 +12,6 @@ public class BattleDetailService {
     BattleDetailRepo battleDetailRepo;
 
     public BattleDetail getBattleDetail(String battleNo) {
-        return battleDetailRepo.findBybattle_number(battleNo);
+        return battleDetailRepo.findBybattleNumber(battleNo);
     }
 }
