@@ -11,9 +11,9 @@ public class BattleDetail {
     private String year;
     @Column(unique = true, nullable = false)
     private String battleNumber;
-    @OneToOne(targetEntity = King.class, cascade = CascadeType.ALL)
+    @OneToOne(targetEntity = King.class, cascade = {CascadeType.MERGE})
     private King attacker;
-    @OneToOne(targetEntity = King.class, cascade = CascadeType.ALL)
+    @OneToOne(targetEntity = King.class, cascade = {CascadeType.MERGE})
     private King defender;
     private String attacker_2;
     private String attacker_3;
@@ -30,8 +30,9 @@ public class BattleDetail {
     private String attacker_commander;
     private String defender_commander;
     private String summer;
-    @OneToOne(targetEntity = Place.class, cascade = CascadeType.ALL)
+    @OneToOne(targetEntity = Place.class, cascade = {CascadeType.MERGE})
     private Place place;
+    @Column(length = 10000)
     private String note;
 
     protected BattleDetail() {

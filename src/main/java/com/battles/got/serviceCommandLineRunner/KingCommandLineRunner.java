@@ -46,19 +46,19 @@ public class KingCommandLineRunner implements CommandLineRunner {
             if (attKing != null) {
                 battleDetail.setAttacker(attKing);
             } else {
-                attKing = new King(record.get(3), record.get(5));
+                attKing = kingRepo.save(new King(record.get(3), record.get(5)));
                 battleDetail.setAttacker(attKing);
             }
             if (defKing != null) {
                 battleDetail.setAttacker(defKing);
             } else {
-                defKing = new King(record.get(4), record.get(9));
+                defKing = kingRepo.save(new King(record.get(4), record.get(9)));
                 battleDetail.setDefender(defKing);
             }
             if (place != null) {
                 battleDetail.setPlace(place);
             } else {
-                place = new Place(record.get(22), record.get(23));
+                place = placeRepo.save(new Place(record.get(22), record.get(23)));
                 battleDetail.setPlace(place);
             }
             battleDetailRepo.save(battleDetail);
