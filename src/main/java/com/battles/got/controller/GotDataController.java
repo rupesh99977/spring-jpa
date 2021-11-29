@@ -32,7 +32,7 @@ public class GotDataController {
         return placeRepo.count();
     }
 
-    @RequestMapping(value = "/battle/info", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/battle/info", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE, params={battleNo})
     public BattleDetail getBattleDetail(@RequestParam(required = true) String battleNo) {
         return battleDetailService.getBattleDetail(battleNo);
     }
