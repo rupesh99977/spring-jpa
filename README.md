@@ -1,5 +1,8 @@
 # spring-jpa
 
-During start of application data is read from csv file and added to db, there is a know issue there causing the application to crash.
-Also in controller there is know issue.
-Working on the issues, will keep the readme and repo updated.
+Application is running successfully <br>
+API details:<br>
+if running locally using intellij or eclipse<br>
+fetch battle detail by battle number: http://localhost:8080/getinfo/battle/info?battleNo=2 <br>
+all location detail: http://localhost:8080/getinfo/location <br>
+all location count detail: http://localhost:8080/location/count <br>
