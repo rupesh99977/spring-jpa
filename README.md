@@ -9,3 +9,4 @@ fetch battle detail by battle number: http://localhost:8080/getinfo/battle/info?
 all location detail: http://localhost:8080/getinfo/location <br>
 all location count detail: http://localhost:8080/location/count <br>
 <br>
+Working on exception handling
